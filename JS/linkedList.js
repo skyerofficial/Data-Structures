@@ -8,6 +8,15 @@ function LinkedList(){
   this.head = null;
 }
 
+LinkedList.prototype.displayAll = function () {
+  var current = this.head;
+  var result = ""
+  while(current){
+    result += current.val + " ";
+    current = current.next;
+  }
+  return result;
+};
 
 LinkedList.prototype.addAtBeginning = function (value) {
     var temp = this.head;
