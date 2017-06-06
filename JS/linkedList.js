@@ -1,3 +1,11 @@
+function InvalidIndexException(index) {
+  this.value = index;
+   this.message = ' is an invalid index.';
+   this.toString = function() {
+      return String(this.value) + this.message;
+   };
+}
+
 function Node(data){
   this.val = data;
   this.next = null;
