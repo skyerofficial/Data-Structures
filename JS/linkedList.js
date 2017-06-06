@@ -24,3 +24,17 @@ LinkedList.prototype.addAtBeginning = function (value) {
     this.head.next = temp;
     this._length++;
 };
+
+LinkedList.prototype.add = function (value) {
+  if(this.head == null){
+    this.addAtBeginning(value);
+  }
+  else{
+    var current = this.head;
+    while(current.next){
+      current = current.next;
+    }
+    current.next = new Node(value);
+    this._length++;
+  }
+};
