@@ -46,3 +46,23 @@ LinkedList.prototype.add = function (value) {
     this._length++;
   }
 };
+
+LinkedList.prototype.addAt = function (value,index) {
+    if(index == 1){
+      this.addAtBeginning(value);
+    }
+    else if ((index > 1)&&(index <= this._length + 1)){
+      var current = this.head;
+      var toMove = index-2;
+      while(toMove--){
+        current = current.next;
+      }
+      var temp = new Node(value);
+      temp.next = current.next;
+      current.next = temp;
+      this._length ++;
+    }
+    else{
+      throw new InvalidIndexException(index).toString();
+    }
+};
