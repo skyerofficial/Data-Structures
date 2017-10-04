@@ -1,15 +1,21 @@
+#Class to create a node with key and next pointer
 class Node:
-     # Each node has its data and a pointer that points to next node in the Linked List
+
+    #Constructor to initialize key & node
+
     def __init__(self, data=None, next=None):
         self.data = data
         self.next = None
 
+#Class contains methods to perform operation on linklist
 class LinkList:
-    # Defining the head of the linked list
+
+#Constructor of the class to initialize head node
     def __init__(self):
         self.head = None
 
-# inserting the node at the beginning
+#Method to add node at the beginning of linllist
+
     def add_beg(self, data):
         node = Node(data)
         if self.head == None:
@@ -18,7 +24,7 @@ class LinkList:
             node.next = self.head
             self.head = node
 
- # inserting at the end of linked list
+    #Method to add node at the end of linklist
     def add_end(self, data):
         node = Node(data)
         p = self.head
@@ -37,7 +43,7 @@ class LinkList:
                 self.add_end(val)
             val = input("enter the node value: \n")
 
-# deleting an item based on data(or key)
+    #Deleting an item based on data(or key)
     def del_node(self, data):
         p = self.head
         if p != None:
@@ -61,13 +67,14 @@ class LinkList:
                 sav.next = p.next
                 return
 
+    #Method to print nodes of link list.            
     def print_list(self):
         node = self.head
         while node:
             print node.data
             node = node.next
 
-
+#Main method
 def main():
     l = LinkList()
     case = input("Enter your choice - \n1:InsertNode,\n2:DeleteNode\n")
