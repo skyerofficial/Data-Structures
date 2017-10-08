@@ -6,7 +6,7 @@
 #include <limits.h>
 #include <stdbool.h>
 
-
+//function only
 char* isBalanced(char* s) {
     // Complete this function
     int count = 0, size = strlen(s);
