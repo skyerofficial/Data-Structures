@@ -45,7 +45,7 @@ char* isBalanced(char* s) {
     return "NO";
     
 }
-
+//main function
 int main() {
     int t; 
     scanf("%i", &t);
