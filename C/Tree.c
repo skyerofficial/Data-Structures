@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+//this is the function
 typedef struct node {
     int key;
     char *data;
