@@ -1,0 +1,49 @@
+#!/bin/bash
+
+llinsert() {
+   local END=${#LST[@]}
+   local i
+
+   for((i=0; NXT[i]; i=NXT[i]))
+   do
+     [ "${LST[NXT[i]]}" \> "$1" ] && break
+   done
+
+   LST[END]="$1"
+   ((NXT[END]=NXT[i]))
+   ((NXT[i]=END))
+
+  shift
+  (($#)) && llinsert $@
+}
+
+llfirst() {
+  pos=NXT[0]
+  echo "${LST[pos]}"
+}
+
+llnext() {
+   (( NXT[pos] )) && {
+       ((pos=NXT[pos]))
+       echo "${LST[pos]}"
+   }
+}
+
+LST=("")
+
+llinsert please sort this small list
+llinsert of words
+
+llfirst
+while llnext
+do
+  :
+done
+
+# Debug - Output array contents
+echo
+printf "%-4s %-8s %-3s\n" Idx LST NXT
+printf "%-4s %-8s %-3s\n" --- -------- ---
+for((i=0;i<${#NXT[@]};i++)) {
+   printf "%-4s %-8s %-3s\n" "$i" "${LST[i]}" "${NXT[i]}"
+}
