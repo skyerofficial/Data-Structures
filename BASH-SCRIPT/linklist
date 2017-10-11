@@ -1,4 +1,3 @@
-#!/bin/bash
 
 llinsert() {
    local END=${#LST[@]}
