@@ -1,4 +1,5 @@
 #Class to create a node with key and next pointer
+#------------------------------------------------
 class Node:
 
     #Constructor to initialize key & node
