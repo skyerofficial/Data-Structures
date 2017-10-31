@@ -13,14 +13,12 @@ struct Node* Head = NULL ;
 void Insert_Beg(int Value)  // To Create a list
 {
 	struct Node* Temp = new(struct Node) ;
-	if(Head == NULL)
-	{
+	if(Head == NULL){
 		Temp -> Data = Value ;
 		Temp -> Link = NULL ;
 		Head = Temp ;
 	}
-	else
-	{
+	else{
 		Temp->Data=Value;
 		Temp->Link=Head;
 		Head=Temp;
