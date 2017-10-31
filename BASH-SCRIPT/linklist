@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# She Bang Added 
 llinsert() {
    local END=${#LST[@]}
    local i
