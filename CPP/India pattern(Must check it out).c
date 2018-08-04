@@ -1,4 +1,5 @@
 #include <stdio.h>
+//this is full power fun
 main()
 {
     int a,b,c;
