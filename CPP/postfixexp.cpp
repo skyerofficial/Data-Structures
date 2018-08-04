@@ -4,7 +4,7 @@ struct node{
     int data;
     node *next;
 }*head=NULL,*head1=NULL;
-
+//function hahaa
 void push(int value)
 {
     node *temp;
