@@ -29,7 +29,7 @@ int pop(stack **h) {
      return val;
    }
 }
-
+//main function
 int main() {
     stack *s = NULL;
     push(&s,1);
